@@ -1,0 +1,10 @@
+def solution(X, Y, D):
+    # Implement your solution here
+    distance = Y - X
+    #count the full jumps
+    jumps = distance // D
+    
+    if distance % D != 0:
+        jumps += 1
+
+    return jumps
