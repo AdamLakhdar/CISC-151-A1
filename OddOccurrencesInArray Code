@@ -1,0 +1,22 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # Implement your solution here
+    counts = {}
+
+    #empty dictionary to keep track of occurrences
+
+    #count how many times each number appears
+
+    for number in A:
+        if number in counts:
+            counts[number] += 1
+
+        else:
+            counts[number]=1
+    
+    #for function to find number the appears an odd number of times
+    for number in counts:
+        if counts[number]%2 != 0:
+            return number
