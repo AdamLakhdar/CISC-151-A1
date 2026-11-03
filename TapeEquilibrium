@@ -1,0 +1,32 @@
+def solution(A):
+    # Implement your solution here
+    # empty right side array
+    right_total = 0
+
+    #calulate the total of the array
+
+    for number in A:
+        right_total += number
+
+    #A new empty array for the left side
+    
+    left_total = 0 
+    smallest = None 
+
+    #New function to stop before the last element
+
+    for i in range (len(A)-1):
+        left_total += A[i]
+        right_total -= A[i]
+
+
+        difference = left_total - right_total
+
+        #make difference positive if negative
+        if difference < 0:
+            difference = -difference
+
+        if smallest is None or difference < smallest:
+            smallest = difference
+
+    return smallest
