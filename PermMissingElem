@@ -1,0 +1,16 @@
+def solution(A):
+    # Implement your solution here
+    N = len(A)
+    expected_total = 0
+
+    #Add all the numbers that should be present
+    for number in range(1,N + 2):
+        expected_total += number
+
+    #substract the number that are present
+
+    for number in A:
+        expected_total -= number
+
+
+    return expected_total
