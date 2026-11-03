@@ -4,6 +4,7 @@ def solution(X, Y, D):
     #count the full jumps
     jumps = distance // D
     
+# Add a jump if there is distance left over.
     if distance % D != 0:
         jumps += 1
 
