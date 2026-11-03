@@ -1,0 +1,16 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A, K):
+    # Implement your solution here
+    #Empty Array 
+    if len (A) == 0:
+        return A
+    
+    #function to return the last element to the front K times
+    for i in range (K):
+        last = A.pop()
+        A.insert(0,last)
+        
+    return A
+
